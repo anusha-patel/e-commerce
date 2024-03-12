@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif; */
+
+/* navbar css */
+
+.navbar{
+  font-family: 'Poppins';
+  font-size: 1rem;
+  line-height:20px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+  border-bottom:0.5px solid gray !important;
+  
+}
+
+.nav-link{
+  font-weight: 300 !important;
+}
+
+.active{
+  border-bottom: 2px solid black;
+}
+
+
+/* footer */
+
+.footer{
+  color: white;
+  margin: 10px;
+  padding: 20px;
+  background: linear-gradient(to right, #434343 ,#000000 );
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer a:hover{
+  color: #ffefba;
+  border-bottom: 1px solid #ffefba;
+}
+
+
+/* page not found */
+
+.pnf{
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pnf-title{
+  font-weight: 700;
+  font-size: 4rem;
+
+}
+
+.pnf-btn{
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: .5rem;
+  margin-top: 3rem;
+  font-weight: 600;
+}
+
+.pnf-btn:hover{
+  background-color: black;
+  color: white;
+ 
+}
+
+/* ===========register page=============== */
+
+.register{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  flex-direction: column;
+}
+
+/* ===========produts page=============== */
+.product-link{
+  color: #000000;
+  text-decoration: none !important;
+
+}
