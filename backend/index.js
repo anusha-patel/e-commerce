@@ -22,7 +22,7 @@ const app = express();
 //middleware
 // app.use(cors());
 app.use(cors({
-    origin: "https://e-commerce-htm2.vercel.app",
+    origin: "https://e-commerce-front-psi.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
     allowedHeaders: ['Content-Type']
