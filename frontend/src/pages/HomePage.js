@@ -48,7 +48,8 @@ const HomePage = () => {
     try {
       setLoading(true);
       const {data} = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+        // `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+        `https://e-commerce-ten-theta-83.vercel.app/api/v1/product/product-list/${page}`
       );
       // 7:39:26
       setLoading(false)
