@@ -20,7 +20,13 @@ connectDB();
 const app = express();
 
 //middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: "https://e-commerce-htm2.vercel.app",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+    allowedHeaders: ['Content-Type']
+}));
 app.use(express.json());
 app.use(morgan('dev'));
 
