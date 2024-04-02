@@ -48,8 +48,8 @@ const HomePage = () => {
     try {
       setLoading(true);
       const {data} = await axios.get(
-        // `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
-        `https://e-commerce-ten-theta-83.vercel.app/api/v1/product/product-list/${page}`
+        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+        // `https://e-commerce-ten-theta-83.vercel.app/api/v1/product/product-list/${page}`
       );
       // 7:39:26
       setLoading(false)
@@ -181,6 +181,7 @@ const HomePage = () => {
                     width={20}
                     height={300}
                     src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                  
                     className="card-img-top"
                     alt="..."
                   />
