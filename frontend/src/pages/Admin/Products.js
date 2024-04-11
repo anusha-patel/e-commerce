@@ -37,7 +37,8 @@ const Products = () => {
         <h1 className="text-center"> products list</h1>
         <div className="d-flex flex-wrap">
           {products?.map((p) => (
-            <Link to={`/dashboard/admin/product/${p.slug}`} key={p._id} className="product-link">
+            <Link to={`/dashboard/admin/product/${p._id}`} key={p._id} className="product-link">
+              {console.log(p._id)}
                 
                 <div className="card m-2" style={{ width: "18rem" }} >
               <img width={20} height={300} src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`} className="card-img-top" alt="..." />

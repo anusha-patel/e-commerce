@@ -9,7 +9,8 @@ const { Option } = Select;
 
 const UpdateProduct = () => {
   const navigate = useNavigate();
-  const params = useParams();
+  // const params = useParams();
+  const {pid} = useParams();
   const [categories, setCategories] = useState([]);
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -19,13 +20,16 @@ const UpdateProduct = () => {
   const [shipping, setShipping] = useState("");
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
+  console.log(pid)
 
   //get single product
   const getSingleProduct = async () => {
     try {
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/product/get-product/${params.slug}`
-      );
+      const {data} = await axios.get(`${process.env.REACT_APP_API}/api/v1/product/get-product/${pid}`)
+      // const { data } = await axios.get(
+      //   `${process.env.REACT_APP_API}/api/v1/product/get-product/${pid}`
+      // );
+      console.log(data);
       setName(data.product.name);
       setId(data.product._id);
       setDescription(data.product.description);
@@ -38,10 +42,15 @@ const UpdateProduct = () => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    getSingleProduct();
-    //eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getSingleProduct();
+  //   //eslint-disable-next-line
+  // }, []);
+
+  useEffect(() =>{
+    if(pid) getSingleProduct()
+},[pid])
+
   //get all category
   const getAllCategory = async () => {
     try {
