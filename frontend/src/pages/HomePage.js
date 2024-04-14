@@ -133,7 +133,7 @@ const HomePage = () => {
   }
 
   return (
-    // 7:03:15 
+   
     <Layout title={"All products - best offers"}>
       <div className="row mt-3 ms-3">
         <div className="col-md-2 ">
@@ -173,8 +173,8 @@ const HomePage = () => {
         </div>
         <div className="col-md-10">
           {/* {JSON.stringify(radio, null, 4)} */}
-          <h1 className="text-center"> all products</h1>
-          <div className="d-flex flex-wrap">
+          <h1 className="text-center "> All products</h1>
+          <div className="d-flex flex-wrap justify-content-center justify-content-md-start">
             {products?.map((p) => (
                 <div className="card m-2" style={{ width: "18rem" }}>
                   <img

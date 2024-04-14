@@ -53,26 +53,26 @@ const getSimilarProduct = async(pid,cid) =>{
   return (
      <Layout>
         {/* {JSON.stringify(product, null, 4)} */}
-
-        <div className='row mt-3 container'>
-            <div className='col-md-4 border border-secondary p-5' style={{margin:'0 5rem'}}>
-            <img  height={300} style={{width:"20rem" ,margin:"2rem 0" }}  src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`} className="card-img-top" alt={product.name} />
+ <div className='container mt-3'>
+        <div className='row '>
+            <div className='col-md-4 col-sm-10  border-sm-none  border border-secondary p-3 mb-3'>
+            <img   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`} className="card-img-top productDetails-img img-fluid" alt={product.name} />
             </div>
-            <div className='col-md-4'>
-                 <h1 className='text-center'> product Details</h1>
+            <div className='col-md-4 col-sm-10 mb-3 text-center text-md-start'>
+                 <h1 className=' mb-3'> product Details</h1>
                  <h6> Name: {product.name}</h6>
-                 <h6> id: {product._id}</h6>
+                 {/* <h6> id: {product._id}</h6> */}
                   <h6> description: {product.description}</h6>
                   <h6> price: {product.price}</h6>
                   {/* <h6> category: {product.category.name}</h6> */}
                   <button className="btn btn-secondary ms-1">Add to Cart</button>
-                  {/* 8:07:21 */}
+                
                  
             </div>
         </div>
         <div className='row container'>
             {/* <h2>{JSON.stringify(relatedProducts, null, 4)}</h2> */}
-            <h3 className='mx-5 m-4'>similar products</h3>
+            <h3 className='mt-3'>similar products</h3>
             {relatedProducts.length < 1 && (<p className='text-center'> no similar products found</p>)}
 
             <div className="d-flex flex-wrap mx-5">
@@ -98,6 +98,7 @@ const getSimilarProduct = async(pid,cid) =>{
             ))}
           </div>
 
+        </div>
         </div>
      </Layout>
   )

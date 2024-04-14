@@ -1,1 +1,28 @@
 
+
+@media (max-width: 576px) {
+    .productDetails-img {
+      max-height: 200px;
+      width: 100%;
+      
+    }
+    .cart-img{
+        max-width: 80%;
+        margin: 10px auto;
+    }
+    
+      
+  }
+
+  @media (min-width: 576px) and (max-width: 768px) {
+    .productDetails-img {
+      max-height: 250px;
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .productDetails-img{
+      max-height: 300px;
+    }
+  }
